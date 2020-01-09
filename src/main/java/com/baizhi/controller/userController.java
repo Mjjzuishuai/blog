@@ -13,16 +13,17 @@ import javax.servlet.http.HttpSession;
 public class userController {
     @Autowired
     BlogUserService service;
+
     @RequestMapping("login")
-    public String login(HttpSession session,String name,String password){
+    public String login(HttpSession session, String name, String password) {
         BlogUser user = service.queryOne(name);
-        if(user==null){
+        if (user == null) {
             return "error";
-        }else {
-            if(password.equals(user.getPassword())){
-                session.setAttribute("adminName",user.getName());
+        } else {
+            if (password.equals(user.getPassword())) {
+                session.setAttribute("adminName", user.getName());
                 return "redirect:/back/back.jsp";
-            }else {
+            } else {
                 return "error";
             }
         }

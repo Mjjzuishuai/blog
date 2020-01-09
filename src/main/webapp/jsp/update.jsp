@@ -25,16 +25,15 @@
     <script type="text/javascript">
         //    调用编辑器
         var testEditor;
-        $(function() {
+        $(function () {
             testEditor = editormd("test-editormd", {
-                width   : "1000px",
-                height  : 640,
-                syncScrolling : "single",
-                path    : "${pageContext.request.contextPath}/static/editormd/lib/"
+                width: "1000px",
+                height: 640,
+                syncScrolling: "single",
+                path: "${pageContext.request.contextPath}/static/editormd/lib/"
             });
         });
     </script>
-
 
 
 </head>
@@ -57,7 +56,7 @@
     <!--文本标记区-->
     <div id="layout">
         <div id="test-editormd">
-            <textarea style="display:none;" name="summary" >${requestScope.blog.summary}</textarea>
+            <textarea style="display:none;" name="summary">${requestScope.blog.summary}</textarea>
         </div>
     </div>
 

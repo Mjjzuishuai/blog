@@ -14,7 +14,7 @@
     <!--通过实体作为筛选条件查询-->
     <select id="queryAll" resultMap="MylogMap" parameterType="Mylog">
         select
-          id, adminname, date, thing, flag
+        id, adminname, date, thing, flag
         from s2sm.mylog
         <where>
             <if test="id != null and id != ''">

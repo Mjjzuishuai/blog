@@ -8,20 +8,22 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+
 @Service
 @Transactional
-public class BlogUserServiceImpl implements BlogUserService{
+public class BlogUserServiceImpl implements BlogUserService {
     @Autowired
     BlogUserDao dao;
+
     @Override
-    @Transactional(propagation = Propagation.SUPPORTS,readOnly = true)
+    @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
     public List<BlogUser> queryAll() {
         List<BlogUser> Users = dao.queryAll();
         return Users;
     }
 
     @Override
-    @Transactional(propagation = Propagation.SUPPORTS,readOnly = true)
+    @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
     public BlogUser queryOne(String name) {
         BlogUser user = dao.queryOne(name);
         return user;

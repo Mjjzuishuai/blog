@@ -19,7 +19,7 @@ public class MylogController {
     //查所有
     @RequestMapping("queryAll")
     @ResponseBody
-    public List<Mylog> queryAll(){
+    public List<Mylog> queryAll() {
         List<Mylog> mylogs = mylogService.queryAll(null);
         return mylogs;
     }

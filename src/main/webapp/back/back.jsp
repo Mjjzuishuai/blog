@@ -21,12 +21,14 @@
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                               管理员操作
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                               aria-expanded="true" aria-controls="collapseOne">
+                                管理员操作
                             </a>
                         </h4>
                     </div>
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                         aria-labelledby="headingOne">
                         <div class="panel-body">
                             <a href="javascript:$('#right').load('${pageContext.request.contextPath}/jsp/main.jsp')">所有微博</a>
                         </div>
@@ -35,7 +37,8 @@
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingTwo">
                         <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 管理员
                             </a>
                         </h4>
@@ -50,7 +53,9 @@
         </div>
         <div class="col-xs-10" id="right">
             <div class="page-header">
-                <h1>欢迎进入博客系统<small>请各位管理员谨慎操作</small></h1>
+                <h1>欢迎进入博客系统
+                    <small>请各位管理员谨慎操作</small>
+                </h1>
             </div>
         </div>
     </div>

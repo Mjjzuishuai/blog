@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.baizhi.dao.BlogDao">
-    <select id="queryAll"  resultType="Blog">
+    <select id="queryAll" resultType="Blog">
         select id,title,summary,pubtime from blog
     </select>
     <!--add-->
@@ -13,7 +13,7 @@
         select id,title,summary,pubtime from blog where id=#{id}
     </select>
     <!--upDate-->
-    <update id="upDate" parameterType="Blog" >
+    <update id="upDate" parameterType="Blog">
         update blog set id=#{id},title=#{title},summary=#{summary},pubtime=#{pubTime} where id = #{id}
     </update>
     <!--delete-->

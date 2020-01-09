@@ -11,6 +11,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Mjj {
     public static void main(String[] args) {
 
-        SpringApplication.run(Mjj.class,args);
+        SpringApplication.run(Mjj.class, args);
     }
 }

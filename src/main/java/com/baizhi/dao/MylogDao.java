@@ -1,7 +1,7 @@
 package com.baizhi.dao;
 
 import com.baizhi.entity.Mylog;
-import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 /**
@@ -13,14 +13,11 @@ import java.util.List;
 public interface MylogDao {
 
 
-
     //查所有
     List<Mylog> queryAll(Mylog mylog);
 
     //添加
     void insert(Mylog mylog);
-
-
 
 
 }

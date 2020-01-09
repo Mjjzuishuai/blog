@@ -2,10 +2,8 @@ package com.baizhi.es.repository;
 
 import com.baizhi.entity.Blog;
 import lombok.SneakyThrows;
-import org.aspectj.weaver.ast.Var;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.index.query.QueryBuilders;
-import org.elasticsearch.index.query.QueryStringQueryBuilder;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightField;
@@ -32,7 +30,7 @@ public class BlogCustomerRepositoryImpl implements BlogCustomerRepository {
     ElasticsearchTemplate elasticsearchTemplate;
 
     //查询所有并且高亮
-    public List<Blog> findByTermAndHigh(String term){
+    public List<Blog> findByTermAndHigh(String term) {
         HighlightBuilder.Field field = new HighlightBuilder
                 .Field("*")
                 .requireFieldMatch(false)

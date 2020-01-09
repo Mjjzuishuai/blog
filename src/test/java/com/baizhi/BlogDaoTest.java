@@ -11,18 +11,20 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.Date;
 import java.util.List;
 
-@RunWith(value= SpringRunner.class)
+@RunWith(value = SpringRunner.class)
 @SpringBootTest(classes = Mjj.class)
 public class BlogDaoTest {
     @Autowired
     BlogDao dao;
+
     @Test
-    public void BlogDaoTest(){
+    public void BlogDaoTest() {
         List<Blog> blogs = dao.queryAll();
         System.out.println(blogs);
     }
+
     @Test
-    public void addTest(){
+    public void addTest() {
         Blog blog = new Blog("4", "sdfsd", "dsafsd", new Date());
         dao.add(blog);
     }

@@ -2,7 +2,7 @@ server:
   port: 8989
   servlet:
     context-path: /springboot_blog
-  #提供页面热部署
+    #提供页面热部署
     jsp:
       init-parameters:
         development: true

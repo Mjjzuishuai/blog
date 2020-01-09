@@ -56,15 +56,16 @@
     <div>
         <c:if test="${requestScope.blogs!=null}">
             <c:forEach var="blog" items="${requestScope.blogs}">
-            <div class="row">
-                <div class="container">
-                    <div class="jumbotron">
-                        <h3>${blog.title}</h3>
-                        <span class="summary">${blog.pubTime}</span><br/><br/>
-                        <p><a class="btn btn-primary btn-lg" href="${app}/blog/findOne?id=${blog.id}" role="button">阅读全文</a></p>
+                <div class="row">
+                    <div class="container">
+                        <div class="jumbotron">
+                            <h3>${blog.title}</h3>
+                            <span class="summary">${blog.pubTime}</span><br/><br/>
+                            <p><a class="btn btn-primary btn-lg" href="${app}/blog/findOne?id=${blog.id}" role="button">阅读全文</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
             </c:forEach>
         </c:if>
     </div>

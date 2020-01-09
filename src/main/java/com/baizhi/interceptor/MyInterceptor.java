@@ -1,6 +1,5 @@
 package com.baizhi.interceptor;
 
-import com.baizhi.entity.BlogUser;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -13,7 +12,7 @@ public class MyInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         Object adminName = request.getSession().getAttribute("adminName");
-        if(adminName==null){
+        if (adminName == null) {
             response.sendRedirect("/login.jsp");
             return false;
         }

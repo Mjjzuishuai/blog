@@ -1,6 +1,7 @@
 package com.baizhi.service;
 
 import com.baizhi.entity.Mylog;
+
 import java.util.List;
 
 /**
@@ -12,13 +13,11 @@ import java.util.List;
 public interface MylogService {
 
 
-
     //查所有
     List<Mylog> queryAll(Mylog mylog);
 
     //添加一个
     void insert(Mylog mylog);
-
 
 
 }

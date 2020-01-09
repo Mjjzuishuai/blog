@@ -12,6 +12,7 @@ import java.util.Arrays;
 public class MarkdownToHtml {
     /**
      * 直接将markdown语义的文本转为html格式输出
+     *
      * @param content markdown语义文本
      * @return
      */
@@ -19,8 +20,10 @@ public class MarkdownToHtml {
         String html = parse(content);
         return html;
     }
+
     /**
      * markdown to image
+     *
      * @param content markdown contents
      * @return parse html contents
      */

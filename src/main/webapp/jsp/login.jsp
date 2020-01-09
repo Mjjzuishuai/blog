@@ -23,9 +23,9 @@
 <form class="form-signin" action="${pageContext.request.contextPath}/user/login" method="post">
 
     <h2 class="form-signin-heading">请登录</h2>
-        <c:if test="${requestScope.error eq 'aa'}">
-          <p style="color: red">密码或者用户名错误</p>
-        </c:if>
+    <c:if test="${requestScope.error eq 'aa'}">
+        <p style="color: red">密码或者用户名错误</p>
+    </c:if>
 
     <label for="inputEmail" class="sr-only">请输入用户名</label>
     <input type="text" id="inputEmail" name="name" class="form-control" placeholder="用户名" required autofocus>

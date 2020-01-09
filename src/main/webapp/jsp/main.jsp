@@ -28,8 +28,8 @@
                 cellEdit: false,//开启单元格编辑
                 autowidth: true,//自适应父容器
                 colNames: ["id", "标题", "摘要", "发表时间", "操作"],   //表格标题
-                closeAfterEdit:true,
-                editurl:"${app}/blog/delete",
+                closeAfterEdit: true,
+                editurl: "${app}/blog/delete",
                 colModel: [
                     {
                         name: "id",
@@ -45,19 +45,20 @@
                         name: "pubTime",
                     },
                     {
-                        name:"xx",
-                        formatter:function(cellvalue, options, rowObject){
-                          return "<a class=\"btn btn-default btn-danger\" onclick=\"deleteById('"+rowObject.id+"')\">删除</a> <a class=\"btn btn-default btn-warning\" onclick=\"update('"+rowObject.id+"')\">修改</a>";
+                        name: "xx",
+                        formatter: function (cellvalue, options, rowObject) {
+                            return "<a class=\"btn btn-default btn-danger\" onclick=\"deleteById('" + rowObject.id + "')\">删除</a> <a class=\"btn btn-default btn-warning\" onclick=\"update('" + rowObject.id + "')\">修改</a>";
                         }
                     }
                 ]
-            }).jqGrid('navGrid', {edit : false,add : false,del : true});
+            }).jqGrid('navGrid', {edit: false, add: false, del: true});
 
         });
 
         function update(id) {
-            location.href="${app}/blog/queryOne?id="+id;
+            location.href = "${app}/blog/queryOne?id=" + id;
         }
+
         function deleteById(id) {
 
             if (id != null)
@@ -66,7 +67,8 @@
                 });
             else {
                 alert("Please Select Row to delete!");
-            }};
+            }
+        };
 
 
     </script>
