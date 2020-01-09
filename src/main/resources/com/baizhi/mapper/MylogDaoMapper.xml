@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baizhi.dao.MylogDao">
+
+    <resultMap type="com.baizhi.entity.Mylog" id="MylogMap">
+        <result property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="adminname" column="adminname" jdbcType="VARCHAR"/>
+        <result property="date" column="date" jdbcType="TIMESTAMP"/>
+        <result property="thing" column="thing" jdbcType="VARCHAR"/>
+        <result property="flag" column="flag" jdbcType="VARCHAR"/>
+    </resultMap>
+
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="MylogMap" parameterType="Mylog">
+        select
+          id, adminname, date, thing, flag
+        from s2sm.mylog
+        <where>
+            <if test="id != null and id != ''">
+                and id = #{id}
+            </if>
+            <if test="adminname != null and adminname != ''">
+                and adminname = #{adminname}
+            </if>
+            <if test="date != null">
+                and date = #{date}
+            </if>
+            <if test="thing != null and thing != ''">
+                and thing = #{thing}
+            </if>
+            <if test="flag != null and flag != ''">
+                and flag = #{flag}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true" parameterType="Mylog">
+        insert into s2sm.mylog(id,adminname, date, thing, flag)
+        values (#{id},#{adminname}, #{date}, #{thing}, #{flag})
+    </insert>
+
+</mapper>
